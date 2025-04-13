@@ -1,0 +1,185 @@
+{
+    "doctors": [
+      {
+        "id": 1,
+        "name": { "first": "Alice", "last": "Johnson" },
+        "email": "alice.johnson@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/1.jpg" },
+        "specialty": "Cardiologist",
+        "location": { "city": "New York", "country": "USA" },
+        "phone": "+1 212-555-1234"
+      },
+      {
+        "id": 2,
+        "name": { "first": "David", "last": "Smith" },
+        "email": "david.smith@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/2.jpg" },
+        "specialty": "Neurologist",
+        "location": { "city": "San Francisco", "country": "USA" },
+        "phone": "+1 415-555-5678"
+      },
+      {
+        "id": 3,
+        "name": { "first": "Emily", "last": "Davis" },
+        "email": "emily.davis@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/3.jpg" },
+        "specialty": "Orthopedic Surgeon",
+        "location": { "city": "Los Angeles", "country": "USA" },
+        "phone": "+1 323-555-9101"
+      },
+      {
+        "id": 4,
+        "name": { "first": "James", "last": "Miller" },
+        "email": "james.miller@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/4.jpg" },
+        "specialty": "Pediatrician",
+        "location": { "city": "Chicago", "country": "USA" },
+        "phone": "+1 312-555-2345"
+      },
+      {
+        "id": 5,
+        "name": { "first": "Sophia", "last": "Martinez" },
+        "email": "sophia.martinez@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/5.jpg" },
+        "specialty": "Dermatologist",
+        "location": { "city": "Miami", "country": "USA" },
+        "phone": "+1 305-555-6789"
+      },
+      {
+        "id": 6,
+        "name": { "first": "Michael", "last": "Taylor" },
+        "email": "michael.taylor@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/6.jpg" },
+        "specialty": "Dentist",
+        "location": { "city": "Houston", "country": "USA" },
+        "phone": "+1 713-555-4321"
+      },
+      {
+        "id": 7,
+        "name": { "first": "Isabella", "last": "Hernandez" },
+        "email": "isabella.hernandez@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/7.jpg" },
+        "specialty": "Gynecologist",
+        "location": { "city": "Dallas", "country": "USA" },
+        "phone": "+1 214-555-8765"
+      },
+      {
+        "id": 8,
+        "name": { "first": "William", "last": "Garcia" },
+        "email": "william.garcia@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/8.jpg" },
+        "specialty": "Ophthalmologist",
+        "location": { "city": "Austin", "country": "USA" },
+        "phone": "+1 512-555-3210"
+      },
+      {
+        "id": 9,
+        "name": { "first": "Olivia", "last": "White" },
+        "email": "olivia.white@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/9.jpg" },
+        "specialty": "Endocrinologist",
+        "location": { "city": "Seattle", "country": "USA" },
+        "phone": "+1 206-555-4321"
+      },
+      {
+        "id": 10,
+        "name": { "first": "Ethan", "last": "Wilson" },
+        "email": "ethan.wilson@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/10.jpg" },
+        "specialty": "Psychiatrist",
+        "location": { "city": "Denver", "country": "USA" },
+        "phone": "+1 303-555-6543"
+      },
+      {
+        "id": 11,
+        "name": { "first": "Lucas", "last": "Green" },
+        "email": "lucas.green@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/11.jpg" },
+        "specialty": "Plastic Surgeon",
+        "location": { "city": "Boston", "country": "USA" },
+        "phone": "+1 617-555-7890"
+      },
+      {
+        "id": 12,
+        "name": { "first": "Ava", "last": "Clark" },
+        "email": "ava.clark@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/12.jpg" },
+        "specialty": "Radiologist",
+        "location": { "city": "San Diego", "country": "USA" },
+        "phone": "+1 858-555-1234"
+      },
+      {
+        "id": 13,
+        "name": { "first": "Liam", "last": "Rodriguez" },
+        "email": "liam.rodriguez@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/13.jpg" },
+        "specialty": "Urologist",
+        "location": { "city": "Philadelphia", "country": "USA" },
+        "phone": "+1 215-555-4321"
+      },
+      {
+        "id": 14,
+        "name": { "first": "Mia", "last": "Lewis" },
+        "email": "mia.lewis@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/14.jpg" },
+        "specialty": "Pathologist",
+        "location": { "city": "Phoenix", "country": "USA" },
+        "phone": "+1 602-555-5678"
+      },
+      {
+        "id": 15,
+        "name": { "first": "Noah", "last": "Walker" },
+        "email": "noah.walker@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/15.jpg" },
+        "specialty": "General Practitioner",
+        "location": { "city": "Charlotte", "country": "USA" },
+        "phone": "+1 704-555-6789"
+      },
+      {
+        "id": 16,
+        "name": { "first": "Grace", "last": "Allen" },
+        "email": "grace.allen@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/16.jpg" },
+        "specialty": "Anesthesiologist",
+        "location": { "city": "Portland", "country": "USA" },
+        "phone": "+1 503-555-2345"
+      },
+      {
+        "id": 17,
+        "name": { "first": "Ethan", "last": "Scott" },
+        "email": "ethan.scott@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/16.jpg" },
+        "specialty": "Infectious Disease Specialist",
+        "location": { "city": "Columbus", "country": "USA" },
+        "phone": "+1 614-555-3456"
+      },
+      {
+        "id": 18,
+        "name": { "first": "Sophia", "last": "Young" },
+        "email": "sophia.young@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/17.jpg" },
+        "specialty": "Chiropractor",
+        "location": { "city": "Las Vegas", "country": "USA" },
+        "phone": "+1 702-555-2341"
+      },
+      {
+        "id": 19,
+        "name": { "first": "Jackson", "last": "King" },
+        "email": "jackson.king@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/17.jpg" },
+        "specialty": "Ear, Nose, and Throat Specialist",
+        "location": { "city": "Indianapolis", "country": "USA" },
+        "phone": "+1 317-555-5671"
+      },
+      {
+        "id": 20,
+        "name": { "first": "Chloe", "last": "Lopez" },
+        "email": "chloe.lopez@example.com",
+        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/18.jpg" },
+        "specialty": "Gastroenterologist",
+        "location": { "city": "Detroit", "country": "USA" },
+        "phone": "+1 313-555-7892"
+      }
+    ]
+  }
+  

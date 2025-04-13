@@ -1,7 +1,21 @@
 import Image from "next/image";
-
+import { Button } from "@/components/ui/button";
+import Hero from "./_components/Hero";
+import CategoriesSearch from "./_components/CategoriesSearch";
+import Doctors from "./_components/Doctors";
+import Testimonial from "./_components/Testimonial";
 export default function Home() {
   return (
-   <h1 className="bg-red-500 text-2xl font-bold text-yellow-500">piku</h1>
+<>
+{/* Hero Section */}
+<Hero/>
+{/* searchbar + categories */}
+<CategoriesSearch/>
+{/* doctors list display */}
+<Doctors/>
+{/* testimonial */}
+<Testimonial/>
+</>
   );
 }
+        

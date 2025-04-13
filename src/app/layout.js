@@ -1,6 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono , outfit } from "next/font/google";
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+import Header from "./_components/Header";
+import ReduxProvider from "./redux/ReduxProvider";
+import Footer from "./Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,11 +23,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
+      
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
       >
-        {children}
+        <ReduxProvider>
+        <div>
+          <Header/>
+          <div className="">
+          {children}
+          </div>
+        <Footer/>
+        </div>
+        </ReduxProvider>
+       
       </body>
     </html>
   );
