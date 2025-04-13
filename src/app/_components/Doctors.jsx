@@ -1,6 +1,6 @@
-'use client'
+"use client";
 import React, { useState, useEffect } from "react";
-import doctorsData from "../data/data.json"
+import doctorsData from "../data/data.json";
 //redux
 import { useSelector, useDispatch } from "react-redux";
 import { setOriginalDrData } from "../redux/slices/doctorsDAta";
@@ -14,7 +14,7 @@ export default function Doctors() {
 
   useEffect(() => {
     setLoading(false);
-    drDataDispatch(setOriginalDrData(doctorsData.doctors));
+    drDataDispatch(setOriginalDrData(doctorsData));
   }, []);
 
   if (loading) {
@@ -34,14 +34,22 @@ export default function Doctors() {
       {drData.map((doctor) => (
         <div
           key={doctor.id}
-          className="border p-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between max-w-sm mx-auto"
+          className="border p-4 hover:bg-[#e6f1ff]  cursor-pointer nrounded shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between max-w-sm mx-auto"
         >
           <div>
-            <img
-              src={doctor.picture?.medium}
-              alt={`Dr. ${doctor.name?.first} ${doctor.name?.last}`}
-              className="rounded-full mx-auto mb-4 w-24 h-24 object-cover"
-            />
+            {doctor.picture?.medium ? (
+              <img
+                src={doctor.picture.medium}
+                alt={`Dr. ${doctor.name?.first}`}
+                className="rounded-full mx-auto mb-4 w-24 h-24 object-cover bg-primary/40 text-center"
+              />
+            ) : (
+              <div className="rounded-full mx-auto mb-4 w-24 h-24 flex items-center justify-center bg-blue-500 text-white text-lg font-bold">
+                {doctor.name?.first?.charAt(0)}
+                {doctor.name?.last?.charAt(0)}
+              </div>
+            )}
+
             <h2 className="text-xl font-semibold text-center">
               Dr. {doctor.name?.first} {doctor.name?.last}
             </h2>

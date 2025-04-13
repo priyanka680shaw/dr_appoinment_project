@@ -1,8 +1,5 @@
 'use client'
-import React from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setResetDrData , setDrData} from "../redux/slices/doctorsDAta";
 const CategoriesSearch = () => {
@@ -10,10 +7,11 @@ const CategoriesSearch = () => {
   const dispatch = useDispatch()
   //searchFunction
   const allData = useSelector((state)=>state.drData.originalDrDAta)
-  console.log("allssssss" , allData)
-  
-  function searchDoctord(e){
+  // console.log("allssssss" , allData)
+  const [query , setSearchQuery] = useState("")
+  function handleSearch(e){
     const query = (e.target.value).toLowerCase().trim();
+    setSearchQuery(query)
 
     console.log(query);
 
@@ -24,13 +22,19 @@ const CategoriesSearch = () => {
         // console.log("no data found")
     }
     else{
-      const searchData =  allData.filter((items , idx)=> items.specialty.toLowerCase().includes(query))
-      dispatch(setDrData(searchData))
+      const searchedDoctorData =  allData.filter((doctors , idx)=>{
+        return(
+          doctors.name.first.toLowerCase().includes(query)||
+          doctors.name.last.toLowerCase().includes(query)||
+          doctors.specialty.toLowerCase().includes(query)
+        )
+      })
+      dispatch(setDrData(searchedDoctorData))
     }
 
   }
 
-
+ 
 
   return (
     <>
@@ -44,11 +48,16 @@ const CategoriesSearch = () => {
               Search your <span className="text-primary">Doctors</span> and Book
               Appoinment
             </h2>
-            <div className="flex w-full max-w-sm items-center space-x-2">
-                
-              <Input type="text" placeholder="Search Doctor" className= "text-primary" onChange = {searchDoctord}/>
-              {/* <Button type="submit" className= "cursor-pointer"><Search/> Search</Button> */}
-            </div>
+            {/* Search Bar */}
+      <div className="mb-6 flex justify-center ">
+        <input
+          type="text"
+          placeholder="Search by name or specialty..."
+          value={query}
+          onChange={handleSearch}
+          className="w-full max-w-xxl p-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary md:w-[600px]"
+        />
+      </div>
           </div>
         </div>
       </section>

@@ -1,185 +1,513 @@
-{
-    "doctors": [
-      {
-        "id": 1,
-        "name": { "first": "Alice", "last": "Johnson" },
-        "email": "alice.johnson@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/1.jpg" },
-        "specialty": "Cardiologist",
-        "location": { "city": "New York", "country": "USA" },
-        "phone": "+1 212-555-1234"
-      },
-      {
-        "id": 2,
-        "name": { "first": "David", "last": "Smith" },
-        "email": "david.smith@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/2.jpg" },
-        "specialty": "Neurologist",
-        "location": { "city": "San Francisco", "country": "USA" },
-        "phone": "+1 415-555-5678"
-      },
-      {
-        "id": 3,
-        "name": { "first": "Emily", "last": "Davis" },
-        "email": "emily.davis@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/3.jpg" },
-        "specialty": "Orthopedic Surgeon",
-        "location": { "city": "Los Angeles", "country": "USA" },
-        "phone": "+1 323-555-9101"
-      },
-      {
-        "id": 4,
-        "name": { "first": "James", "last": "Miller" },
-        "email": "james.miller@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/4.jpg" },
-        "specialty": "Pediatrician",
-        "location": { "city": "Chicago", "country": "USA" },
-        "phone": "+1 312-555-2345"
-      },
-      {
-        "id": 5,
-        "name": { "first": "Sophia", "last": "Martinez" },
-        "email": "sophia.martinez@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/5.jpg" },
-        "specialty": "Dermatologist",
-        "location": { "city": "Miami", "country": "USA" },
-        "phone": "+1 305-555-6789"
-      },
-      {
-        "id": 6,
-        "name": { "first": "Michael", "last": "Taylor" },
-        "email": "michael.taylor@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/6.jpg" },
-        "specialty": "Dentist",
-        "location": { "city": "Houston", "country": "USA" },
-        "phone": "+1 713-555-4321"
-      },
-      {
-        "id": 7,
-        "name": { "first": "Isabella", "last": "Hernandez" },
-        "email": "isabella.hernandez@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/7.jpg" },
-        "specialty": "Gynecologist",
-        "location": { "city": "Dallas", "country": "USA" },
-        "phone": "+1 214-555-8765"
-      },
-      {
-        "id": 8,
-        "name": { "first": "William", "last": "Garcia" },
-        "email": "william.garcia@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/8.jpg" },
-        "specialty": "Ophthalmologist",
-        "location": { "city": "Austin", "country": "USA" },
-        "phone": "+1 512-555-3210"
-      },
-      {
-        "id": 9,
-        "name": { "first": "Olivia", "last": "White" },
-        "email": "olivia.white@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/9.jpg" },
-        "specialty": "Endocrinologist",
-        "location": { "city": "Seattle", "country": "USA" },
-        "phone": "+1 206-555-4321"
-      },
-      {
-        "id": 10,
-        "name": { "first": "Ethan", "last": "Wilson" },
-        "email": "ethan.wilson@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/10.jpg" },
-        "specialty": "Psychiatrist",
-        "location": { "city": "Denver", "country": "USA" },
-        "phone": "+1 303-555-6543"
-      },
-      {
-        "id": 11,
-        "name": { "first": "Lucas", "last": "Green" },
-        "email": "lucas.green@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/11.jpg" },
-        "specialty": "Plastic Surgeon",
-        "location": { "city": "Boston", "country": "USA" },
-        "phone": "+1 617-555-7890"
-      },
-      {
-        "id": 12,
-        "name": { "first": "Ava", "last": "Clark" },
-        "email": "ava.clark@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/12.jpg" },
-        "specialty": "Radiologist",
-        "location": { "city": "San Diego", "country": "USA" },
-        "phone": "+1 858-555-1234"
-      },
-      {
-        "id": 13,
-        "name": { "first": "Liam", "last": "Rodriguez" },
-        "email": "liam.rodriguez@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/13.jpg" },
-        "specialty": "Urologist",
-        "location": { "city": "Philadelphia", "country": "USA" },
-        "phone": "+1 215-555-4321"
-      },
-      {
-        "id": 14,
-        "name": { "first": "Mia", "last": "Lewis" },
-        "email": "mia.lewis@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/14.jpg" },
-        "specialty": "Pathologist",
-        "location": { "city": "Phoenix", "country": "USA" },
-        "phone": "+1 602-555-5678"
-      },
-      {
-        "id": 15,
-        "name": { "first": "Noah", "last": "Walker" },
-        "email": "noah.walker@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/15.jpg" },
-        "specialty": "General Practitioner",
-        "location": { "city": "Charlotte", "country": "USA" },
-        "phone": "+1 704-555-6789"
-      },
-      {
-        "id": 16,
-        "name": { "first": "Grace", "last": "Allen" },
-        "email": "grace.allen@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/16.jpg" },
-        "specialty": "Anesthesiologist",
-        "location": { "city": "Portland", "country": "USA" },
-        "phone": "+1 503-555-2345"
-      },
-      {
-        "id": 17,
-        "name": { "first": "Ethan", "last": "Scott" },
-        "email": "ethan.scott@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/16.jpg" },
-        "specialty": "Infectious Disease Specialist",
-        "location": { "city": "Columbus", "country": "USA" },
-        "phone": "+1 614-555-3456"
-      },
-      {
-        "id": 18,
-        "name": { "first": "Sophia", "last": "Young" },
-        "email": "sophia.young@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/17.jpg" },
-        "specialty": "Chiropractor",
-        "location": { "city": "Las Vegas", "country": "USA" },
-        "phone": "+1 702-555-2341"
-      },
-      {
-        "id": 19,
-        "name": { "first": "Jackson", "last": "King" },
-        "email": "jackson.king@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/men/17.jpg" },
-        "specialty": "Ear, Nose, and Throat Specialist",
-        "location": { "city": "Indianapolis", "country": "USA" },
-        "phone": "+1 317-555-5671"
-      },
-      {
-        "id": 20,
-        "name": { "first": "Chloe", "last": "Lopez" },
-        "email": "chloe.lopez@example.com",
-        "picture": { "medium": "https://randomuser.me/api/portraits/med/women/18.jpg" },
-        "specialty": "Gastroenterologist",
-        "location": { "city": "Detroit", "country": "USA" },
-        "phone": "+1 313-555-7892"
-      }
-    ]
+[
+
+  {
+    "id": 1,
+    "name": {
+      "first": "Isabella",
+      "last": "Rodriguez"
+    },
+    "email": "isabella.rodriguez@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/99.jpg"
+    },
+    "specialty": "Dermatologist",
+    "location": {
+      "city": "Miami",
+      "country": "USA"
+    },
+    "phone": "+1 360-555-1524",
+    "years_of_experience": 13,
+    "biography": "Dr. Isabella Rodriguez is a dermatologist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "Hindi",
+      "German"
+    ],
+    "certification": "Certified Dermatologist",
+    "office_address": "5 Medical Lane, Miami, FL"
+  },
+  {
+    "id": 2,
+    "name": {
+      "first": "Amelia",
+      "last": "Garcia"
+    },
+    "email": "amelia.garcia@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/2.jpg"
+    },
+    "specialty": "Cardiologist",
+    "location": {
+      "city": "San Antonio",
+      "country": "USA"
+    },
+    "phone": "+1 384-555-9921",
+    "years_of_experience": 10,
+    "biography": "Dr. Amelia Garcia is a cardiologist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "English",
+      "German"
+    ],
+    "certification": "Certified Cardiologist",
+    "office_address": "10 Medical Lane, San Antonio, FL"
+  },
+  {
+    "id": 3,
+    "name": {
+      "first": "Amelia",
+      "last": "Davis"
+    },
+    "email": "amelia.davis@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/3.jpg"
+    },
+    "specialty": "Cardiologist",
+    "location": {
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "phone": "+1 362-555-3175",
+    "years_of_experience": 16,
+    "biography": "Dr. Amelia Davis is a cardiologist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "Hindi"
+    ],
+    "certification": "Certified Cardiologist",
+    "office_address": "15 Medical Lane, Los Angeles, FL"
+  },
+  {
+    "id": 4,
+    "name": {
+      "first": "Ava",
+      "last": "Miller"
+    },
+    "email": "ava.miller@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/4.jpg"
+    },
+    "specialty": "Psychiatrist",
+    "location": {
+      "city": "Philadelphia",
+      "country": "USA"
+    },
+    "phone": "+1 350-555-5906",
+    "years_of_experience": 19,
+    "biography": "Dr. Ava Miller is a psychiatrist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "Hindi"
+    ],
+    "certification": "Certified Psychiatrist",
+    "office_address": "20 Medical Lane, Philadelphia, FL"
+  },
+  {
+    "id": 5,
+    "name": {
+      "first": "Charlotte",
+      "last": "Smith"
+    },
+    "email": "charlotte.smith@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/5.jpg"
+    },
+    "specialty": "General Physician",
+    "location": {
+      "city": "New York",
+      "country": "USA"
+    },
+    "phone": "+1 394-555-7699",
+    "years_of_experience": 5,
+    "biography": "Dr. Charlotte Smith is a general physician with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "French",
+      "English"
+    ],
+    "certification": "Certified General Physician",
+    "office_address": "25 Medical Lane, New York, FL"
+  },
+  {
+    "id": 6,
+    "name": {
+      "first": "Amelia",
+      "last": "Davis"
+    },
+    "email": "amelia.davis@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/6.jpg"
+    },
+    "specialty": "Dentist",
+    "location": {
+      "city": "San Antonio",
+      "country": "USA"
+    },
+    "phone": "+1 378-555-1534",
+    "years_of_experience": 11,
+    "biography": "Dr. Amelia Davis is a dentist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "English"
+    ],
+    "certification": "Certified Dentist",
+    "office_address": "30 Medical Lane, San Antonio, FL"
+  },
+  {
+    "id": 7,
+    "name": {
+      "first": "Olivia",
+      "last": "Davis"
+    },
+    "email": "olivia.davis@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/7.jpg"
+    },
+    "specialty": "Neurologist",
+    "location": {
+      "city": "Phoenix",
+      "country": "USA"
+    },
+    "phone": "+1 395-555-8427",
+    "years_of_experience": 14,
+    "biography": "Dr. Olivia Davis is a neurologist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "French",
+      "German"
+    ],
+    "certification": "Certified Neurologist",
+    "office_address": "35 Medical Lane, Phoenix, FL"
+  },
+  {
+    "id": 8,
+    "name": {
+      "first": "Emma",
+      "last": "Garcia"
+    },
+    "email": "emma.garcia@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/8.jpg"
+    },
+    "specialty": "Ophthalmologist",
+    "location": {
+      "city": "Phoenix",
+      "country": "USA"
+    },
+    "phone": "+1 316-555-4625",
+    "years_of_experience": 5,
+    "biography": "Dr. Emma Garcia is a ophthalmologist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "Spanish"
+    ],
+    "certification": "Certified Ophthalmologist",
+    "office_address": "40 Medical Lane, Phoenix, FL"
+  },
+  {
+    "id": 9,
+    "name": {
+      "first": "Amelia",
+      "last": "Brown"
+    },
+    "email": "amelia.brown@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/9.jpg"
+    },
+    "specialty": "Orthopedic Surgeon",
+    "location": {
+      "city": "Phoenix",
+      "country": "USA"
+    },
+    "phone": "+1 394-555-8045",
+    "years_of_experience": 7,
+    "biography": "Dr. Amelia Brown is a orthopedic surgeon with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "French"
+    ],
+    "certification": "Certified Orthopedic Surgeon",
+    "office_address": "45 Medical Lane, Phoenix, FL"
+  },
+  {
+    "id": 10,
+    "name": {
+      "first": "Ava",
+      "last": "Garcia"
+    },
+    "email": "ava.garcia@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/10.jpg"
+    },
+    "specialty": "General Physician",
+    "location": {
+      "city": "San Antonio",
+      "country": "USA"
+    },
+    "phone": "+1 333-555-9941",
+    "years_of_experience": 16,
+    "biography": "Dr. Ava Garcia is a general physician with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "Hindi",
+      "Spanish"
+    ],
+    "certification": "Certified General Physician",
+    "office_address": "50 Medical Lane, San Antonio, FL"
+  },
+  {
+    "id": 11,
+    "name": {
+      "first": "Harper",
+      "last": "Williams"
+    },
+    "email": "harper.williams@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/11.jpg"
+    },
+    "specialty": "Dermatologist",
+    "location": {
+      "city": "Miami",
+      "country": "USA"
+    },
+    "phone": "+1 314-555-9289",
+    "years_of_experience": 5,
+    "biography": "Dr. Harper Williams is a dermatologist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "Spanish"
+    ],
+    "certification": "Certified Dermatologist",
+    "office_address": "55 Medical Lane, Miami, FL"
+  },
+  {
+    "id": 12,
+    "name": {
+      "first": "Emma",
+      "last": "Garcia"
+    },
+    "email": "emma.garcia@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/12.jpg"
+    },
+    "specialty": "Gynecologist",
+    "location": {
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "phone": "+1 326-555-3089",
+    "years_of_experience": 3,
+    "biography": "Dr. Emma Garcia is a gynecologist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "Spanish"
+    ],
+    "certification": "Certified Gynecologist",
+    "office_address": "60 Medical Lane, Los Angeles, FL"
+  },
+  {
+    "id": 13,
+    "name": {
+      "first": "Mia",
+      "last": "Davis"
+    },
+    "email": "mia.davis@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/13.jpg"
+    },
+    "specialty": "Ophthalmologist",
+    "location": {
+      "city": "San Antonio",
+      "country": "USA"
+    },
+    "phone": "+1 366-555-7253",
+    "years_of_experience": 14,
+    "biography": "Dr. Mia Davis is a ophthalmologist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "English"
+    ],
+    "certification": "Certified Ophthalmologist",
+    "office_address": "65 Medical Lane, San Antonio, FL"
+  },
+  {
+    "id": 14,
+    "name": {
+      "first": "Harper",
+      "last": "Garcia"
+    },
+    "email": "harper.garcia@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/14.jpg"
+    },
+    "specialty": "Orthopedic Surgeon",
+    "location": {
+      "city": "Miami",
+      "country": "USA"
+    },
+    "phone": "+1 312-555-9812",
+    "years_of_experience": 9,
+    "biography": "Dr. Harper Garcia is a orthopedic surgeon with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "French",
+      "German"
+    ],
+    "certification": "Certified Orthopedic Surgeon",
+    "office_address": "70 Medical Lane, Miami, FL"
+  },
+  {
+    "id": 15,
+    "name": {
+      "first": "Amelia",
+      "last": "Miller"
+    },
+    "email": "amelia.miller@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/15.jpg"
+    },
+    "specialty": "Dentist",
+    "location": {
+      "city": "Dallas",
+      "country": "USA"
+    },
+    "phone": "+1 363-555-4733",
+    "years_of_experience": 17,
+    "biography": "Dr. Amelia Miller is a dentist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "German",
+      "French"
+    ],
+    "certification": "Certified Dentist",
+    "office_address": "75 Medical Lane, Dallas, FL"
+  },
+  {
+    "id": 16,
+    "name": {
+      "first": "Ava",
+      "last": "Johnson"
+    },
+    "email": "ava.johnson@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/16.jpg"
+    },
+    "specialty": "Orthopedic Surgeon",
+    "location": {
+      "city": "Dallas",
+      "country": "USA"
+    },
+    "phone": "+1 369-555-5534",
+    "years_of_experience": 23,
+    "biography": "Dr. Ava Johnson is a orthopedic surgeon with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "German",
+      "English"
+    ],
+    "certification": "Certified Orthopedic Surgeon",
+    "office_address": "80 Medical Lane, Dallas, FL"
+  },
+  {
+    "id": 17,
+    "name": {
+      "first": "Charlotte",
+      "last": "Garcia"
+    },
+    "email": "charlotte.garcia@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/17.jpg"
+    },
+    "specialty": "Psychiatrist",
+    "location": {
+      "city": "San Antonio",
+      "country": "USA"
+    },
+    "phone": "+1 310-555-4711",
+    "years_of_experience": 11,
+    "biography": "Dr. Charlotte Garcia is a psychiatrist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "German"
+    ],
+    "certification": "Certified Psychiatrist",
+    "office_address": "85 Medical Lane, San Antonio, FL"
+  },
+  {
+    "id": 18,
+    "name": {
+      "first": "Evelyn",
+      "last": "Johnson"
+    },
+    "email": "evelyn.johnson@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/18.jpg"
+    },
+    "specialty": "Orthopedic Surgeon",
+    "location": {
+      "city": "Houston",
+      "country": "USA"
+    },
+    "phone": "+1 341-555-8196",
+    "years_of_experience": 18,
+    "biography": "Dr. Evelyn Johnson is a orthopedic surgeon with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "Spanish"
+    ],
+    "certification": "Certified Orthopedic Surgeon",
+    "office_address": "90 Medical Lane, Houston, FL"
+  },
+  {
+    "id": 19,
+    "name": {
+      "first": "Olivia",
+      "last": "Williams"
+    },
+    "email": "olivia.williams@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/19.jpg"
+    },
+    "specialty": "General Physician",
+    "location": {
+      "city": "Philadelphia",
+      "country": "USA"
+    },
+    "phone": "+1 397-555-2930",
+    "years_of_experience": 17,
+    "biography": "Dr. Olivia Williams is a general physician with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "English",
+      "Spanish"
+    ],
+    "certification": "Certified General Physician",
+    "office_address": "95 Medical Lane, Philadelphia, FL"
+  },
+  {
+    "id": 20,
+    "name": {
+      "first": "Mia",
+      "last": "Rodriguez"
+    },
+    "email": "mia.rodriguez@example.com",
+    "picture": {
+      "medium": "https://randomuser.me/api/portraits/med/women/20.jpg"
+    },
+    "specialty": "Psychiatrist",
+    "location": {
+      "city": "New York",
+      "country": "USA"
+    },
+    "phone": "+1 380-555-4929",
+    "years_of_experience": 10,
+    "biography": "Dr. Mia Rodriguez is a psychiatrist with expertise in various treatments and procedures. She is committed to providing the best care to her patients.",
+    "available_hours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "languages_spoken": [
+      "Hindi",
+      "English"
+    ],
+    "certification": "Certified Psychiatrist",
+    "office_address": "100 Medical Lane, New York, FL"
   }
-  
+]

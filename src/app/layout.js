@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Header from "./_components/Header";
 import ReduxProvider from "./redux/ReduxProvider";
-import Footer from "./Footer";
+import Footer from "./_components/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
