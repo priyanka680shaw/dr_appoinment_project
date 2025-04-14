@@ -67,9 +67,9 @@ const Testimonial = () => {
             <div className="container mx-auto w-[90%]">
                 {/* Header Section */}
                 <div className="text-center mb-10 max-w-[600px] mx-auto">
-                    <p className="text-xl font-bold  text-primary">What Our Customers are saying</p>
-                    <h1 className="text-3xl font-bold">Testimonial</h1>
-                    <p className="text-md text-gray-500" data-aos = "zoom-in">
+                    <p className="text-xl font-bold  text-primary dark:text-cyan-400">What Our Customers are saying</p>
+                    <h1 className="text-3xl font-bold dark:text-slate-100">Testimonial</h1>
+                    <p className="text-md text-black dark:text-slate-100" data-aos = "zoom-in">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum aperiam suscipit excepturi eius ullam quod soluta rerum est possimus ad eligendi debitis tempora quaerat distinctio quos, facilis optio commodi facere.
                     </p>
                 </div>
@@ -84,8 +84,8 @@ const Testimonial = () => {
                                     </div>
                                     <div className="flex flex-col items-center gap-4">
                                         <div className="space-y-3">
-                                            <p className="text-md text-gray-600 dark:text-gray-400">{data.text}</p>
-                                            <h1 className="text-xl font-bold text-black/80 dark:text-white">{data.name}</h1>
+                                            <p className="text-md text-gray-600 dark:text-slate-100">{data.text}</p>
+                                            <h1 className="text-xl font-bold text-black/80 dark:text-cyan-400">{data.name}</h1>
                                         </div>
                                     </div>
                                     <p className="text-black/20 text-9xl absolute    top-0 right-0">,,</p>

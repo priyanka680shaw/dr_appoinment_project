@@ -11,18 +11,18 @@ const Hero = () => {
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 md:items-center md:gap-8">
       <div>
         <div className="max-w-lg md:max-w-none">
-          <h2 className="text-7xl font-bold text-gray-900 sm:text-3xl">
-            Find and Book <span className='text-primary'> Appoinment </span> with your fav <span className='text-primary'> Doctor's</span>
+          <h2 className="text-7xl font-bold text-gray-800 sm:text-3xl dark:text-slate-100">
+            Find and Book <span className='text-primary dark:text-sky-400'> Appoinment </span> with your fav <span className='text-primary dark:text-sky-400'> Doctor's</span>
           </h2>
 
-          <p className="mt-4 text-gray-700 text-xl font-semi">
+          <p className="mt-4 text-gray-800 text-xl font-semibold dark:text-slate-100">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque saepe
             architecto maiores repudiandae amet perferendis repellendus, reprehenderit voluptas
             sequi architecto maiores repudiandae amet perferendis repellendus, reprehenderit voluptas.
           </p>
         <div className='md:flex hidden py-4'>
           <Link href = "/explore">
-          <button className='bg-primary text-white px-4 py-3 rounded-sm text-md font-bold whitespace-nowrap cursor-pointer'>Explore more</button>
+          <button className='bg-primary text-white px-4 py-3 rounded-sm text-md font-bold whitespace-nowrap cursor-pointer dark:bg-[#007dfc] dark:text-slate-100 dark:hover:bg-cyan-500'>Explore more</button>
           </Link>
      
         </div>

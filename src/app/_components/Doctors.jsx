@@ -30,11 +30,11 @@ export default function Doctors() {
   }
 
   return (
-    <div className="p-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    <div className="p-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 ">
       {drData.map((doctor) => (
         <div
           key={doctor.id}
-          className="border p-4 hover:bg-[#e6f1ff]  cursor-pointer nrounded shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between max-w-sm mx-auto"
+          className="border p-4 hover:bg-[#e6f1ff]  cursor-pointer nrounded shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between max-w-sm mx-auto  dark:hover:bg-[#1e2939] dark:border-cyan-500"
         >
           <div>
             {doctor.picture?.medium ? (
@@ -50,24 +50,24 @@ export default function Doctors() {
               </div>
             )}
 
-            <h2 className="text-xl font-semibold text-center">
+            <h2 className="text-xl font-semibold text-center dark:text-slate-300">
               Dr. {doctor.name?.first} {doctor.name?.last}
             </h2>
 
             {/* Highlight specialty */}
-            <p className="text-center text-sm font-bold text-primary mt-1">
+            <p className="text-center text-sm font-bold text-primary mt-1 dark:text-slate-100">
               {doctor.specialty}
             </p>
 
-            <p className="text-center text-gray-600 mt-2">
+            <p className="text-center text-gray-900 mt-2 dark:text-slate-100">
               {doctor.location?.city}, {doctor.location?.country}
             </p>
-            <p className="text-center text-sm text-gray-400">{doctor.email}</p>
-            <p className="text-center text-sm text-gray-400">{doctor.phone}</p>
+            <p className="text-center text-sm text-gray-800 dark:text-slate-100">{doctor.email}</p>
+            <p className="text-center text-sm text-gray-800 dark:text-slate-100">{doctor.phone}</p>
           </div>
 
           {/* Book Appointment button */}
-          <button className="mt-4 self-center bg-primary text-white text-sm px-3 py-1.5 rounded-md hover:bg-primary/90 transition cursor-pointer">
+          <button className="mt-4 self-center bg-primary text-white text-sm px-3 py-1.5 rounded-md hover:bg-primary/90 transition cursor-pointer dark:text-slate-100 dark:bg-[#007dfc] dark:hover:bg-cyan-500 ">
             Book Appointment
           </button>
         </div>

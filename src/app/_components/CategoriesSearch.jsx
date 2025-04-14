@@ -42,10 +42,10 @@ const CategoriesSearch = () => {
         <div className="">
           <div className="flex flex-col items-center gap-3">
             <h2 className="font-bold text-4xl">
-              Search <span className="text-primary">Doctors</span>
+              Search <span className="text-primary dark:text-cyan-400">Doctors</span>
             </h2>
-            <h2 className="text-gray-400 text-xl font-bold">
-              Search your <span className="text-primary">Doctors</span> and Book
+            <h2 className="text-gray-800 text-xl font-bold dark:text-slate-100">
+              Search your <span className="text-primary dark:text-cyan-400">Doctors</span> and Book
               Appoinment
             </h2>
             {/* Search Bar */}
@@ -55,7 +55,7 @@ const CategoriesSearch = () => {
           placeholder="Search by name or specialty..."
           value={query}
           onChange={handleSearch}
-          className="w-full max-w-xxl p-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary md:w-[600px]"
+          className="w-full max-w-xxl p-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary md:w-[600px] dark:focus:ring-cyan-400 dark:text-slate-100"
         />
       </div>
           </div>

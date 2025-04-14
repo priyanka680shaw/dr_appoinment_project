@@ -12,7 +12,7 @@ import {
 
 const ContactPage = () => {
   return (
-    <section className="w-full min-h-screen  dark:bg-gray-900 px-4 py-16 text-gray-800 dark:text-white">
+    <section className="w-full min-h-screen   px-4 py-16 text-gray-800 dark:text-white">
       <div className="max-w-6xl mx-auto grid md:grid-cols-1  items-center">
         
         {/* -------- Left Side: Contact Form -------- */}
@@ -53,7 +53,7 @@ const ContactPage = () => {
             </div>
             <button
               type="submit"
-              className=" cursor-pointer mt-4 bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-opacity-90 transition duration-300"
+              className=" cursor-pointer mt-4 bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-opacity-90 transition duration-300 dark:bg-[#007dfc] dark:text-slate-100 dark:hover:bg-cyan-500"
             >
               Send Message
             </button>
