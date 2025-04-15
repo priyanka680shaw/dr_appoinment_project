@@ -82,12 +82,12 @@ const Explore = () => {
               </p>
 
               {/* Book Appointment Button */}
-              <button
+              {/* <button
                 onClick={() => handleBookAppointment(`${doctor.name.first} ${doctor.name.last}`)}
                 className="w-full mt-4 py-2 px-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary transition duration-300 dark:bg-[#007dfc] dark:text-slate-100 dark:hover:bg-cyan-500"
               >
                 Book Appointment
-              </button>
+              </button> */}
             </div>
           ))
         )}

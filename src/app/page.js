@@ -1,4 +1,7 @@
 import Image from "next/image";
+//react tostify
+
+
 import { Button } from "@/components/ui/button";
 import Hero from "./_components/Hero";
 import CategoriesSearch from "./_components/CategoriesSearch";
@@ -8,6 +11,7 @@ import CalendarView from "./_components/Calenderview";
 export default function Home() {
   return (
 <>
+  
 {/* Hero Section */}
 <Hero/>
 {/* searchbar + categories */}

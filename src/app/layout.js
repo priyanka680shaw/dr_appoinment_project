@@ -2,7 +2,8 @@ import { Geist, Geist_Mono , outfit } from "next/font/google";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'; // import the default styling
 import Header from "./_components/Header";
 import ReduxProvider from "./redux/ReduxProvider";
 import Footer from "./_components/Footer";
@@ -30,6 +31,8 @@ export default function RootLayout({ children }) {
       >
         <ReduxProvider>
         <div>
+           {/* Your routes or page components */}
+             <ToastContainer position="top-center" autoClose={1000} />
           <Header/>
           <div className="">
           {children}

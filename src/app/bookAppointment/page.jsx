@@ -1,20 +1,25 @@
 'use client';
 import React from 'react';
+import { toast } from 'react-toastify';
 import { useSelector, useDispatch } from 'react-redux';
 import Image from 'next/image';
+import { setRemoveDoctorFromCart } from '../redux/slices/addToCatr';
 
 const BookAppointment = () => {
   const appointmentData = useSelector((state) => state.drData.drDAta);
+  const bookAppoinmentsDAta = useSelector((state)=>state.addToCart.addedAppoinment)
+  console.log("bookAppoinmentsDAta" , bookAppoinmentsDAta)
   const dispatch = useDispatch();
 
   const handleCancel = (id) => {
-    dispatch({ type: 'REMOVE_FROM_CART', payload: id });
+    toast.error("Appointment Cancelled ❌");
+    dispatch(setRemoveDoctorFromCart(id));
   };
 
   return (
-    <div className="p-6">
-      {appointmentData && appointmentData.length > 0 ? (
-        appointmentData.map((doctor, indx) => (
+    <div className="p-6 min-h-[500px]">
+      {bookAppoinmentsDAta && bookAppoinmentsDAta.length > 0 ? (
+        bookAppoinmentsDAta.map((doctor, indx) => (
           <div
             key={indx}
             className="shadow-md rounded-lg p-4 flex items-center justify-between gap-4 max-w-3xl mx-auto mb-4 border dark:hover:bg-[#1e2939] dark:border-cyan-500"
