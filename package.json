@@ -30,6 +30,7 @@
     "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.10.5",
     "@tailwindcss/postcss": "^4",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
