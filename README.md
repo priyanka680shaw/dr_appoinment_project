@@ -6,7 +6,7 @@ A responsive and user-friendly Doctor Appointment Booking web app built using **
 
 ## 🔗 Live Project
 
-👉 [Click here to visit the live app](https://your-live-project-link.netlify.app)  
+👉 [Click here to visit the live app](https://prismatic-gumption-8e3f10.netlify.app/)  
 _(Replace the link above with your actual deployed Netlify URL)_
 
 ---
