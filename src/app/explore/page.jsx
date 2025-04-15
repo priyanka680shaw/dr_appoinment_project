@@ -4,6 +4,7 @@ import drData from "../data/data.json";
 import { useDispatch, useSelector } from 'react-redux';
 import { setAddtoCart } from '../redux/slices/addToCatr';
 import { toast } from 'react-toastify';
+
 const Explore = () => {
   const [doctors, setDoctors] = useState([]);
   const [searchQuery, setSearchQuery] = useState(''); // State for search query
@@ -12,8 +13,6 @@ const Explore = () => {
   useEffect(() => {
     setDoctors(drData); // Load doctors from local data
   }, []);
-
-  
 
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
@@ -26,21 +25,22 @@ const Explore = () => {
       doctor.specialty.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
+
   const cartDispatch = useDispatch(); // Dispatch for cart
-  const bookAppoinmentsDAta = useSelector((state)=>state.addToCart.addedAppoinment)
- const handleBookAppointment = (doctor) => {
-    const isAlreadyAdded = bookAppoinmentsDAta.find((dr)=>dr.id === doctor.id)
-    if(isAlreadyAdded){
+  const bookAppoinmentsDAta = useSelector((state) => state.addToCart.addedAppoinment);
+
+  const handleBookAppointment = (doctor) => {
+    const isAlreadyAdded = bookAppoinmentsDAta.find((dr) => dr.id === doctor.id);
+    if (isAlreadyAdded) {
       toast.warning("Doctor already booked! 🚫");
-    }
-    else{
+    } else {
       cartDispatch(setAddtoCart(doctor)); // Add the doctor to the cart
       toast.success("Appointment Booked Successfully! ✅");
     }
-   
   };
+
   return (
-    <div className="p-6  min-h-screen">
+    <div className="p-6 min-h-screen">
       <h1 className="text-3xl font-bold mb-6 text-center text-primary dark:text-cyan-400">Explore Doctors</h1>
 
       {/* Search Bar */}
@@ -54,12 +54,15 @@ const Explore = () => {
         />
       </div>
 
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
         {filteredDoctors.length === 0 ? (
           <p>No doctors found matching your search.</p>
         ) : (
           filteredDoctors.map((doctor) => (
-            <div key={doctor.id} className="border hover:cursor-pointer hover:bg-[#e6f1ff] shadow-lg rounded-2xl p-6 dark:hover:bg-[#1e2939] dark:border-cyan-500">
+            <div
+              key={doctor.id}
+              className="border hover:cursor-pointer hover:bg-[#e6f1ff] shadow-lg rounded-2xl p-6 dark:hover:bg-[#1e2939] dark:border-cyan-500"
+            >
               {/* Image and Name */}
               <div className="flex items-center gap-4 mb-4">
                 <img
@@ -78,13 +81,13 @@ const Explore = () => {
 
               {/* Details */}
               <div className="text-sm text-gray-700 space-y-1">
-                <p className='dark:text-slate-100'><strong>📍</strong> {doctor.location.city}, {doctor.location.country}</p>
-                <p className='dark:text-slate-100'><strong>🏠</strong> {doctor.office_address}</p>
-                <p className='dark:text-slate-100'><strong>📞</strong> {doctor.phone}</p>
-                <p className='dark:text-slate-100'><strong>📧</strong> {doctor.email}</p>
-                <p className='dark:text-slate-100'><strong>🕒</strong> {doctor.available_hours}</p>
-                <p className='dark:text-slate-100'><strong>🧠</strong> {doctor.years_of_experience} years experience</p>
-                <p className='dark:text-slate-100'><strong>🗣️</strong> {doctor.languages_spoken.join(", ")}</p>
+                <p className="dark:text-slate-100"><strong>📍</strong> {doctor.location.city}, {doctor.location.country}</p>
+                <p className="dark:text-slate-100"><strong>🏠</strong> {doctor.office_address}</p>
+                <p className="dark:text-slate-100"><strong>📞</strong> {doctor.phone}</p>
+                <p className="dark:text-slate-100"><strong>📧</strong> {doctor.email}</p>
+                <p className="dark:text-slate-100"><strong>🕒</strong> {doctor.available_hours}</p>
+                <p className="dark:text-slate-100"><strong>🧠</strong> {doctor.years_of_experience} years experience</p>
+                <p className="dark:text-slate-100"><strong>🗣️</strong> {doctor.languages_spoken.join(", ")}</p>
               </div>
 
               {/* Bio */}
@@ -94,7 +97,7 @@ const Explore = () => {
 
               {/* Book Appointment Button */}
               <button
-               onClick={() => handleBookAppointment(doctor)}
+                onClick={() => handleBookAppointment(doctor)}
                 className="cursor-pointer w-full mt-4 py-2 px-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary transition duration-300 dark:bg-[#007dfc] dark:text-slate-100 dark:hover:bg-cyan-500"
               >
                 Book Appointment

@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-import { ToastContainer, toast } from 'react-toastify';  // Import the ToastContainer and toast
-import 'react-toastify/dist/ReactToastify.css';  // Import the toast styles
-import doctors from "../data/data.json"; // Assuming data contains doctor objects with 'name' property
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import doctors from "../data/data.json";
 
 const AppointmentModal = ({ slot, event, onClose, onSubmit, onDelete }) => {
   const [title, setTitle] = useState("");
   const [doctorName, setDoctorName] = useState("");
-  console.log("dr data", doctors);
 
   useEffect(() => {
     if (event) {
@@ -17,50 +16,42 @@ const AppointmentModal = ({ slot, event, onClose, onSubmit, onDelete }) => {
       setDoctorName("");
     }
   }, [event]);
+
   const handleSubmit = () => {
-    // Check if either field is empty
     if (!title.trim() || !doctorName.trim()) {
       toast.error("Both Patient Name and Doctor Name are required!");
       return;
     }
-  
+
     const start = event?.start || slot.start;
     const end = event?.end || slot.end;
-  
-    // Combine Patient Name and Doctor Name in the title
-    const eventTitle = `${title}  - Dr. ${doctorName}`;
-  
-    // Call the onSubmit function to save the event
+    const eventTitle = `${title} - Dr. ${doctorName}`;
+
     onSubmit({ title: eventTitle, doctorName, start, end });
-    
     toast.success("Appointment has been booked successfully!");
   };
 
   const handleDelete = () => {
     onDelete(event.id);
-    
-    // Show success toast after deleting the appointment
     toast.success("Appointment has been deleted!");
   };
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded shadow-lg w-[300px]">
-        <h3 className="text-lg font-semibold mb-4">
+      <div className="bg-white dark:bg-gray-900 p-6 rounded shadow-lg w-[300px] transition-all duration-300">
+        <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white">
           {event ? "Edit Appointment" : "Book Appointment"}
         </h3>
 
-        {/* Patient Name input with required attribute */}
         <input
           type="text"
           placeholder="Patient Name"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="border border-gray-300 p-2 w-full mb-4"
+          className="border border-gray-300 dark:border-gray-600 p-2 w-full mb-4 text-black dark:text-white dark:bg-gray-800"
           required
         />
 
-        {/* Doctor Name input with required attribute and datalist for dropdown */}
         <input
           type="text"
           required
@@ -68,11 +59,14 @@ const AppointmentModal = ({ slot, event, onClose, onSubmit, onDelete }) => {
           placeholder="Enter Dr. Name"
           value={doctorName}
           onChange={(e) => setDoctorName(e.target.value)}
-          className="border border-gray-300 p-2 w-full mb-4"
+          className="border border-gray-300 dark:border-gray-600 p-2 w-full mb-4 text-black dark:text-white dark:bg-gray-800"
         />
         <datalist id="doctor-names">
           {doctors.map((doctor, index) => (
-            <option key={index} value={`${doctor.name.first} ${doctor.name.last}  ( ${doctor.specialty} )`} />
+            <option
+              key={index}
+              value={`${doctor.name.first} ${doctor.name.last}  ( ${doctor.specialty} )`}
+            />
           ))}
         </datalist>
 
@@ -95,14 +89,13 @@ const AppointmentModal = ({ slot, event, onClose, onSubmit, onDelete }) => {
 
           <button
             onClick={onClose}
-            className="bg-gray-300 text-black px-3 py-1 rounded"
+            className="bg-gray-300 text-black dark:bg-gray-700 dark:text-white px-3 py-1 rounded"
           >
             Cancel
           </button>
         </div>
       </div>
 
-      {/* Toast container that will display notifications */}
       <ToastContainer />
     </div>
   );
