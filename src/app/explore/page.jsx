@@ -1,8 +1,9 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import drData from "../data/data.json";
-import { useSelector } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { setAddtoCart } from '../redux/slices/addToCatr';
+import { toast } from 'react-toastify';
 const Explore = () => {
   const [doctors, setDoctors] = useState([]);
   const [searchQuery, setSearchQuery] = useState(''); // State for search query
@@ -12,9 +13,7 @@ const Explore = () => {
     setDoctors(drData); // Load doctors from local data
   }, []);
 
-  const handleBookAppointment = (doctorName) => {
-    alert(`You have booked an appointment with Dr. ${doctorName}`);
-  };
+  
 
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
@@ -27,7 +26,19 @@ const Explore = () => {
       doctor.specialty.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
-
+  const cartDispatch = useDispatch(); // Dispatch for cart
+  const bookAppoinmentsDAta = useSelector((state)=>state.addToCart.addedAppoinment)
+ const handleBookAppointment = (doctor) => {
+    const isAlreadyAdded = bookAppoinmentsDAta.find((dr)=>dr.id === doctor.id)
+    if(isAlreadyAdded){
+      toast.warning("Doctor already booked! 🚫");
+    }
+    else{
+      cartDispatch(setAddtoCart(doctor)); // Add the doctor to the cart
+      toast.success("Appointment Booked Successfully! ✅");
+    }
+   
+  };
   return (
     <div className="p-6  min-h-screen">
       <h1 className="text-3xl font-bold mb-6 text-center text-primary dark:text-cyan-400">Explore Doctors</h1>
@@ -82,12 +93,12 @@ const Explore = () => {
               </p>
 
               {/* Book Appointment Button */}
-              {/* <button
-                onClick={() => handleBookAppointment(`${doctor.name.first} ${doctor.name.last}`)}
-                className="w-full mt-4 py-2 px-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary transition duration-300 dark:bg-[#007dfc] dark:text-slate-100 dark:hover:bg-cyan-500"
+              <button
+               onClick={() => handleBookAppointment(doctor)}
+                className="cursor-pointer w-full mt-4 py-2 px-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary transition duration-300 dark:bg-[#007dfc] dark:text-slate-100 dark:hover:bg-cyan-500"
               >
                 Book Appointment
-              </button> */}
+              </button>
             </div>
           ))
         )}

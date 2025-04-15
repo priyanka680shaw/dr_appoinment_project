@@ -21,6 +21,8 @@ export default function Home() {
 <CalendarView/>
 {/* testimonial */}
 <Testimonial/>
+
+{/* <AppointmentModal/> */}
 </>
   );
 }
