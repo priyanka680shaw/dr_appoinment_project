@@ -7,8 +7,10 @@ import { setRemoveDoctorFromCart } from '../redux/slices/addToCatr';
 
 const BookAppointment = () => {
   const appointmentData = useSelector((state) => state.drData.drDAta);
+  
   const bookAppoinmentsDAta = useSelector((state)=>state.addToCart.addedAppoinment)
-  console.log("bookAppoinmentsDAta" , bookAppoinmentsDAta)
+  const bookAppoinmentsDataOfCAlender = useSelector((state)=>state )
+  console.log("bookAppoinmentsDataOfCAlender" , bookAppoinmentsDataOfCAlender)
   const dispatch = useDispatch();
 
   const handleCancel = (id) => {
@@ -26,7 +28,7 @@ const BookAppointment = () => {
           >
             {/* Doctor Image */}
             <img
-              src={doctor?.picture?.medium}
+              src={doctor?.picture?.medium || doctor.doctor.picture?.medium}
               alt={doctor?.name?.first}
               className="w-24 h-24 rounded-full object-cover"
             />
@@ -34,17 +36,22 @@ const BookAppointment = () => {
             {/* Doctor Info */}
             <div className="flex-1">
               <h2 className="text-lg font-semibold dark:text-cyan-400">
-                Dr. {doctor?.name?.first} {doctor?.name?.last}
+                Dr. {doctor?.name?.first || doctor.doctor?.name?.first} {doctor?.name?.last || doctor.doctor?.name?.last}
               </h2>
-              <p className="text-sm text-gray-600 dark:text-slate-100">{doctor?.specialty}</p>
+              <p className="text-sm text-gray-600 dark:text-slate-100">{doctor?.specialty || doctor.doctor?.specialty}</p>
               <p className="text-sm text-gray-500 dark:text-slate-100">
-                {doctor?.location?.city}, {doctor?.location?.country}
+                {doctor?.location?.city}, {doctor?.location?.country || doctor?.doctor?.location?.country}
               </p>
+              <p className="text-sm text-gray-500 dark:text-slate-100">
+                {doctor?.doctor?.available_hours}
+              </p>
+
+              
             </div>
 
             {/* Cancel Button */}
             <button
-              onClick={() => handleCancel(doctor?.id)}
+              onClick={() => handleCancel(doctor?.id || doctor?.doctor.id)}
               className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition cursor-pointer"
             >
               Cancel Your Appointment
