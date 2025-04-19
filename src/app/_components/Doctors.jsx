@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import doctorsData from "../data/data.json";
 import { toast } from "react-toastify";
+import DoctorModal from "./DoctorModel";
 //redux
 import { useSelector, useDispatch } from "react-redux";
 import { setOriginalDrData } from "../redux/slices/doctorsDAta";
@@ -18,6 +19,7 @@ export default function Doctors() {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedDoctor, setSelectedDoctor] = useState(null); // For modal
 
   useEffect(() => {
     setLoading(false);
@@ -53,6 +55,7 @@ export default function Doctors() {
       {drData.map((doctor) => (
         <div
           key={doctor.id}
+          onClick={()=> setSelectedDoctor(doctor)}
           className="border p-4 hover:bg-[#e6f1ff] cursor-pointer rounded shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between max-w-sm mx-auto dark:hover:bg-[#1e2939] dark:border-cyan-500"
         >
           <div>
@@ -89,13 +92,29 @@ export default function Doctors() {
           </div>
 
           <button
-            onClick={() => handleBookAppointment(doctor)}
+            onClick={(e) => 
+            {
+              e.stopPropagation();
+              handleBookAppointment(doctor)
+            }
+            }
             className="mt-4 self-center bg-primary text-white text-sm px-3 py-1.5 rounded-md hover:bg-primary/90 transition cursor-pointer dark:text-slate-100 dark:bg-[#007dfc] dark:hover:bg-cyan-500 "
           >
             Book Appointment
           </button>
         </div>
       ))}
+
+
+        {/* Modal Popup */}
+        {selectedDoctor && (
+        <DoctorModal
+          doctor={selectedDoctor}
+          onClose={() => setSelectedDoctor(null)}
+        />
+      )}
+
+
     </div>
   );
 }
